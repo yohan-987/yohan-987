@@ -10,7 +10,7 @@
 
 ## About
 
-3rd-semester CSE student from Chhattisgarh, India. I've been taking PCs apart since primary school, and these days I build security tooling, AI/ML-backed features, full-stack apps and the occasional game. Beginner on paper, shipping on purpose.
+3rd-semester CSE student from Chhattisgarh, India. I've been taking PCs apart since primary school, and these days I build security tooling, AI/ML-backed features, full-stack apps and the occasional game. Beginner but Always learning.................
 
 | Status | Details |
 |---|---|
