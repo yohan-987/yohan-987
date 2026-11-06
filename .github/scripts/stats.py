@@ -88,7 +88,8 @@ def streaks(days, today=None):
     active = [x for x in days if days[x] > 0]
     cutoff = today - dt.timedelta(days=365)
     year_total = sum(c for d, c in days.items() if d > cutoff)
-    return {'total': sum(days.values()), 'year': today.year, 'year_total': year_total, 'since': min(active) if active else None,
+    cal_year = sum(c for d, c in days.items() if d.year == today.year)
+    return {'total': sum(days.values()), 'year': today.year, 'year_total': year_total, 'cal_year': cal_year, 'since': min(active) if active else None,
             'current': current, 'longest': longest}
 
 def summarise(u):
@@ -120,8 +121,9 @@ def frame(w, h, label, inner):
 
 def render_stats(d):
     v = lambda k: '-' if d is None else f'{d[k]:,}'
-    rows = [('Stars earned', v('stars')), (f'Commits in {dt.datetime.now(dt.timezone.utc).year}', v('commits')),
-            ('Pull requests', v('prs')), ('Issues', v('issues')), ('Public repos', v('repos'))]
+    yr = dt.datetime.now(dt.timezone.utc).year
+    rows = [(f'Contributions in {yr}', v('year_contribs')), (f'Commits in {yr}', v('commits')),
+            ('Pull requests', v('prs')), ('Stars earned', v('stars')), ('Public repos', v('repos'))]
     s = f'<text x="24" y="40" font-family="{SANS}" font-size="18" font-weight="700" fill="{TXT}">Stats</text>'
     for i, (k, val) in enumerate(rows):
         y = 78 + i * 28
@@ -153,8 +155,8 @@ def span(t):
 
 def render_streak(c):
     W, H = 900, 170
-    cols = [(150, 'Commits, all time',
-             None if c is None else f"{c['life_commits']:,}",
+    cols = [(150, 'Total contributions',
+             None if c is None else f"{c['total']:,}",
              '' if c is None or not c['since'] else f"since {fmt(c['since'], True)}"),
             (450, 'Current streak', None if c is None else str(c['current'][0]),
              '' if c is None else span(c['current'])),
@@ -201,6 +203,8 @@ def main():
         days, life = fetch_days(os.environ['GH_USER'], os.environ['GITHUB_TOKEN'])
         cal = streaks(days)
         cal['life_commits'] = life
+    if data is not None and cal is not None:
+        data['year_contribs'] = cal['cal_year']
     open(os.path.join(out, 'streak.svg'), 'w', encoding='utf-8').write(render_streak(cal))
     open(os.path.join(out, 'stats.svg'), 'w', encoding='utf-8').write(render_stats(data))
     open(os.path.join(out, 'langs.svg'), 'w', encoding='utf-8').write(render_langs(data))
