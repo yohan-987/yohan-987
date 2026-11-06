@@ -15,8 +15,8 @@
 | Status | Details |
 |---|---|
 | 🔭 **Building now** | TraceDoc (document forensics), Heist-Game (Unity), this portfolio |
-| 🌱 **Learning** | Unity and C#, OCR and document-forensics pipelines |
-| 🎓 **Studying** | B.Tech CSE, 3rd semester |
+| 🌱 **Learning** |Machine Learning , DSA ,Basic Unity and C#  |
+| 🎓 **Studying** | B.Tech CSE, 2nd year |
 | 🤝 **Open to** | Hackathon teammates and honest code reviews |
 | 🧪 **Origin story** | Trying to run heavy games and software on a potato PC, tinkering with OS settings and accidentally corrupting the OS |
 
@@ -54,7 +54,7 @@ Farmer-to-buyer marketplace behind my Agrithon podium. Partner reputation, negot
 </td>
 <td width="50%" valign="top">
 
-### [GDG Peer Learning](https://github.com/yohan-987/gdg-peer-learning) `deployed`
+### [GDG Peer Learning](https://github.com/yohan-987/gdg-peer-learning) `dropped`
 Campus learning platform organised by GDG tracks. Quizzes and badges, project submissions, a doubt board and a contribution leaderboard.
 <br>`React` `TypeScript` `Tailwind` `Firebase`
 
@@ -86,7 +86,6 @@ A 3D co-op loot-and-survive game set in a haunted hospital, where stealing medic
 **Languages**
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
 **Web and backend**
@@ -129,7 +128,7 @@ A 3D co-op loot-and-survive game set in a haunted hospital, where stealing medic
 
 ## Currently exploring
 
-- OCR and document-forensics pipelines
+- Machine learning and AI 
 - Game architecture in Unity: input, interaction and loot loops
 - Making risk scores honest about what they don't know
 
