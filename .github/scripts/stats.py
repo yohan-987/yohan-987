@@ -6,7 +6,7 @@ MONO = "ui-monospace,SFMono-Regular,Consolas,'Courier New',monospace"
 RED, TXT, MUT = '#ff4d5a', '#e6edf3', '#8b98a9'
 
 QUERY = """
-query($login: String!) {
+query($login: String!, $from: DateTime!) {
   user(login: $login) {
     repositories(ownerAffiliations: OWNER, first: 100, orderBy: {field: PUSHED_AT, direction: DESC}) {
       totalCount
@@ -19,7 +19,7 @@ query($login: String!) {
     }
     pullRequests { totalCount }
     issues { totalCount }
-    contributionsCollection { totalCommitContributions }
+    contributionsCollection(from: $from) { totalCommitContributions }
   }
 }
 """
@@ -37,7 +37,8 @@ def gql(query, variables, token):
     return payload['data']['user']
 
 def fetch(login, token):
-    return gql(QUERY, {'login': login}, token)
+    year = dt.datetime.now(dt.timezone.utc).year
+    return gql(QUERY, {'login': login, 'from': f'{year}-01-01T00:00:00Z'}, token)
 
 def fetch_days(login, token):
     """Return {date: contribution_count} for the whole life of the account."""
@@ -84,7 +85,8 @@ def streaks(days, today=None):
         d -= dt.timedelta(days=1)
     current = (n, d + dt.timedelta(days=1) if n else None, end if n else None)
     active = [x for x in days if days[x] > 0]
-    return {'total': sum(days.values()), 'since': min(active) if active else None,
+    year_total = sum(c for d, c in days.items() if d.year == today.year)
+    return {'total': sum(days.values()), 'year': today.year, 'year_total': year_total, 'since': min(active) if active else None,
             'current': current, 'longest': longest}
 
 def summarise(u):
@@ -116,7 +118,7 @@ def frame(w, h, label, inner):
 
 def render_stats(d):
     v = lambda k: '-' if d is None else f'{d[k]:,}'
-    rows = [('Stars earned', v('stars')), ('Commits, last year', v('commits')),
+    rows = [('Stars earned', v('stars')), (f'Commits in {dt.datetime.now(dt.timezone.utc).year}', v('commits')),
             ('Pull requests', v('prs')), ('Issues', v('issues')), ('Public repos', v('repos'))]
     s = f'<text x="24" y="40" font-family="{SANS}" font-size="18" font-weight="700" fill="{TXT}">Stats</text>'
     for i, (k, val) in enumerate(rows):
@@ -149,8 +151,9 @@ def span(t):
 
 def render_streak(c):
     W, H = 900, 170
-    cols = [(150, 'Total contributions', None if c is None else f"{c['total']:,}",
-             '' if c is None or not c['since'] else f"{fmt(c['since'], True)} - Present"),
+    cols = [(150, 'Contributions in ' + ('this year' if c is None else str(c['year'])),
+             None if c is None else f"{c['year_total']:,}",
+             '' if c is None else 'Jan 1 - Present'),
             (450, 'Current streak', None if c is None else str(c['current'][0]),
              '' if c is None else span(c['current'])),
             (750, 'Longest streak', None if c is None else str(c['longest'][0]),
