@@ -3,6 +3,6 @@
   "tiles": [
     {"big": "3rd", "title": "Agrithon 2026", "lines": ["Prototype Demo", "CVRU i-TBI, CropWise"], "color": "red"},
     {"big": "1st", "title": "Coding contest", "lines": ["CGIT Bilaspur", "cultural fest"], "color": "ice"},
-    {"big": "00", "title": "Certificates", "lines": ["olympiads, scouts,", "hackathons"], "color": "amber"}
+    {"big": "3", "title": "Certificates", "lines": ["olympiads, scouts,", "hackathons"], "color": "amber"}
   ]
 }
