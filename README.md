@@ -22,7 +22,7 @@
 
 <br>
 
-<img src="assets/highlights.svg" alt="Highlights" width="100%">
+<img src="assets/highlights.svg?v=5dbae4d0" alt="Highlights" width="100%">
 
 <br>
 
@@ -112,10 +112,10 @@ A 3D co-op loot-and-survive game set in a haunted hospital, where stealing medic
 
 <div align="center">
 
-<img src="assets/stats.svg" alt="GitHub stats" width="49%">
-<img src="assets/langs.svg" alt="Top languages" width="49%">
+<img src="assets/stats.svg?v=89f173a3" alt="GitHub stats" width="49%">
+<img src="assets/langs.svg?v=0dee7bc6" alt="Top languages" width="49%">
 
-<img src="assets/streak.svg" alt="Contribution streak" width="100%">
+<img src="assets/streak.svg?v=4109e7f7" alt="Contribution streak" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yohan-987/yohan-987/output/github-snake-dark.svg">
