@@ -112,10 +112,10 @@ A 3D co-op loot-and-survive game set in a haunted hospital, where stealing medic
 
 <div align="center">
 
-<img src="assets/stats.svg?v=ef06b4a2" alt="GitHub stats" width="49%">
-<img src="assets/langs.svg?v=0dee7bc6" alt="Top languages" width="49%">
+<img src="assets/stats.svg?v=18fd6db6" alt="GitHub stats" width="49%">
+<img src="assets/langs.svg?v=3fa6e80c" alt="Top languages" width="49%">
 
-<img src="assets/streak.svg?v=6c1d8fe9" alt="Contribution streak" width="100%">
+<img src="assets/streak.svg?v=c44521f5" alt="Contribution streak" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yohan-987/yohan-987/output/github-snake-dark.svg">
