@@ -112,8 +112,8 @@ A 3D co-op loot-and-survive game set in a haunted hospital, where stealing medic
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=yohan-987&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats">
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yohan-987&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages">
+<img src="assets/stats.svg" alt="GitHub stats" width="49%">
+<img src="assets/langs.svg" alt="Top languages" width="49%">
 
 <img src="https://streak-stats.demolab.com/?user=yohan-987&theme=tokyonight&hide_border=true" alt="Contribution streak">
 
