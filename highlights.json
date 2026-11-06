@@ -1,0 +1,8 @@
+{
+  "_help": "Edit the values below and commit. The highlights panel regenerates itself in about a minute. Use 1 to 3 tiles. color can be red, ice, amber or a hex like #7ee787.",
+  "tiles": [
+    {"big": "3rd", "title": "Agrithon 2026", "lines": ["Prototype Demo", "CVRU i-TBI, CropWise"], "color": "red"},
+    {"big": "1st", "title": "Coding contest", "lines": ["CGIT Bilaspur", "cultural fest"], "color": "ice"},
+    {"big": "00", "title": "Certificates", "lines": ["olympiads, scouts,", "hackathons"], "color": "amber"}
+  ]
+}
