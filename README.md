@@ -18,7 +18,7 @@
 |---|---|
 | 🥉 **Agrithon 2026**, CVRU i-TBI Bilaspur | 3rd place, Prototype Demonstration. My first hackathon win, for **CropWise**. |
 | 🥇 **Coding contest**, CGIT Bilaspur cultural fest | 1st place, in my second semester. |
-| 🛡️ **Smart India Hackathon 2026** | Built **TraceMail** solo for SIH26106 (AI email threat detection and forensics). |
+
 
 ## Featured projects
 
